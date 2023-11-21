@@ -11,7 +11,7 @@ public class Util {
     private static Connection connection=null;
     private static Util instance=null;
 
-    public Util() {
+    private Util() {
  try {
           if (connection==null || connection.isClosed()){
               connection=DriverManager.getConnection(dbURL, username, password);
