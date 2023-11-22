@@ -15,7 +15,7 @@ public class UserDaoJDBCImpl implements UserDao {
 
     public void createUsersTable() {
         try (Statement statement= conn.createStatement()){
-            statement.executeUpdate("CREATE TABLE IF NOT EXISTS users (id BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT, name VARCHAR(100), lastName VARCHAR(100),age INT)");
+            statement.executeUpdate("CREATE TABLE IF NOT EXISTS users (id BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT, name VARCHAR(100), lastName VARCHAR(100),age TINYINT)");
         } catch (SQLException e) {
             System.err.println("Таблица с данным именем в базе данных уже существует"+e);
         }

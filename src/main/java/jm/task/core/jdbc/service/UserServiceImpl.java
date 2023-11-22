@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserServiceImpl implements UserService {
-    UserDao userDao=new UserDaoJDBCImpl();
+    private static final UserDao userDao=new UserDaoJDBCImpl();
     public void createUsersTable() {
         userDao.createUsersTable();
     }
